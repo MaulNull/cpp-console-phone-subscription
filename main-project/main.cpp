@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -17,9 +18,47 @@ int main()
     try
     {
         read("data.txt", subscriptions, size);
+        cout << "***** Библиотечный абонемент *****\n\n";
         for (int i = 0; i < size; i++)
         {
             
+            cout << "Номер........: ";
+            
+            cout << subscriptions[i]->number << " ";
+            
+            cout << '\n';
+            
+            cout << "Дата...........: ";
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->dt.day << ".";
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->dt.month << ".";
+            
+            cout << setw(4) << setfill('0') << subscriptions[i]->dt.year << " ";
+            cout << "\n";
+            
+            cout << "Время начала.....: ";
+            cout << setw(2) << setfill('0') << subscriptions[i]->start.hours << ':';
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->start.minutes << ':';
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->start.seconds;
+            cout << '\n';
+            
+            cout << "Продолжительность...: ";
+            cout << setw(2) << setfill('0') << subscriptions[i]->tm.hours << ':';
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->tm.minutes << ':';
+            
+            cout << setw(2) << setfill('0') << subscriptions[i]->tm.seconds << ' ';
+            cout << '\n';
+            cout << "Тариф...: ";
+            cout << subscriptions[i]->tariff << " ";
+            cout << '\n';
+            cout << "Стоимость...: ";
+            cout << subscriptions[i]->pay << " ";
+            cout << '\n';
+            cout << '\n';
         }
         for (int i = 0; i < size; i++)
         {
