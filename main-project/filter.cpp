@@ -16,12 +16,12 @@ phone_subscription** filter(phone_subscription* array[], int size, bool (*check)
 	return result;
 }
 
-bool check_book_subscription_by_mobile(phone_subscription* element)
+bool check_phone_subscription_by_mobile(phone_subscription* element)
 {
 	return strcmp(element->tariff, "мобильный") == 0;
 }
 
-bool check_book_subscription_by_date(phone_subscription* element)
+bool check_phone_subscription_by_date(phone_subscription* element)
 {
 	return element->dt.month == 11 && element->dt.year == 2021;
 }
