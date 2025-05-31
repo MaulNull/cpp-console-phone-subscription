@@ -3,6 +3,6 @@
 
 #include "phone_subscription.h"
 
-int process(phone_subscription* array[], int size);
+double process(phone_subscription* array[], int size);
 
 #endif

@@ -37,7 +37,7 @@ namespace unittestproject
 			subscriptions[0] = build_subscription(0, 1, 3, 0.10);
 			subscriptions[1] = build_subscription(0, 2, 57, 0.20);
 			subscriptions[2] = build_subscription(0, 2, 40, 0.10);
-			Assert::AreEqual(7, process(subscriptions, 3));
+			Assert::AreEqual(0.001, process(subscriptions, 3));
 			delete_subscription(subscriptions, 3);
 		}
 
@@ -47,7 +47,7 @@ namespace unittestproject
 			subscriptions[0] = build_subscription(0, 4, 58, 0.20);
 			subscriptions[1] = build_subscription(0, 5, 2, 0.20);
 			subscriptions[2] = build_subscription(0, 6, 40, 0.10);
-			Assert::AreEqual(12, process(subscriptions, 3));
+			Assert::AreEqual(0.0005, process(subscriptions, 3));
 			delete_subscription(subscriptions, 3);
 		}
 
